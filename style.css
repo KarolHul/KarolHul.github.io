@@ -2,22 +2,38 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #000; /* Czarne tło */
+    color: #00ff00; /* Zielony tekst */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #000; /* Czarne tło nagłówka */
+    color: #00ff00; /* Zielony tekst nagłówka */
     padding: 1em;
     text-align: center;
+    position: relative; /* Dodano do umiejscowienia znaku zachęty */
+}
+
+.prompt {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2em;
+    color: #00ff00;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 section {
     margin: 2em;
+    color: #00ff00; /* Zielony tekst w sekcjach */
 }
 
 h2 {
-    color: #333;
+    color: #00ff00; /* Zielony kolor nagłówków */
 }
 
 ul {
@@ -26,17 +42,19 @@ ul {
 }
 
 li {
-    background-color: #fff;
+    background-color: #000; /* Czarne tło elementów listy */
     margin: 1em 0;
     padding: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 a {
-    color: #007bff;
+    color: #00ff00; /* Zielone linki */
     text-decoration: none;
+    border-bottom: 1px solid #00ff00; /* Dodaj podkreślenie */
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+    text-decoration: none; /* Usuń podkreślenie po najechaniu */
 }
