@@ -2,16 +2,16 @@ body {
     font-family: 'Tiny5', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* Czarne tło */
-    color: #00ff00; /* Zielony tekst */
+    background-color: #000; 
+    color: #00ff00; 
 }
 
 header {
-    background-color: #000; /* Czarne tło nagłówka */
-    color: #00ff00; /* Zielony tekst nagłówka */
+    background-color: #000; 
+    color: #00ff00; 
     padding: 1em;
     text-align: center;
-    position: relative; /* Dodano do umiejscowienia znaku zachęty */
+    position: relative;
 }
 
 .prompt {
@@ -55,17 +55,27 @@ header {
 
 section {
     margin: 2em;
-    color: #00ff00; /* Zielony tekst w sekcjach */
+    color: #00ff00; 
 }
 
 h1 {
-    color: #00ff00; /* Zielony kolor nagłówków */
+    color: #00ff00; 
     font-family: "Libre Barcode 128 Text", system-ui;
-    font-size: 5em; /* Ustaw rozmiar czcionki z jednostką */
+    font-size: 5em; 
+    font-style: normal;
 }
 
 h2 {
     color: #00ff00; /* Zielony kolor nagłówków */
+    position: relative;
+}
+
+h2::before {
+    content: 'X';
+    position: absolute;
+    left: -30px;
+    color: #00ff00;
+    animation: blink 1s step-start infinite;
 }
 
 ul {
@@ -80,10 +90,19 @@ li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-a {
+li a {
+    position: relative;
     color: #00ff00; /* Zielone linki */
     text-decoration: none;
     border-bottom: 1px solid #00ff00; /* Dodaj podkreślenie */
+}
+
+li a::before {
+    content: '>';
+    position: absolute;
+    left: -20px;
+    color: #00ff00;
+    animation: blink 1s step-start infinite;
 }
 
 a:hover {
@@ -93,7 +112,7 @@ a:hover {
 .flag-button#plButton {
     background-image: url('https://cdn.pixabay.com/photo/2012/04/10/16/15/poland-26125_1280.png');
     background-size: cover;
-    color: transparent; /* Ukrycie tekstu, jeśli obraz jest flagą */
+    color: transparent; 
     width: 40px;
     height: 25px;
 }
@@ -101,7 +120,7 @@ a:hover {
 .flag-button#engButton {
     background-image: url('https://media.istockphoto.com/id/880562092/vector/great-britain-united-kingdom-flag.jpg?s=612x612&w=0&k=20&c=z6Qg_O-2pIcreAK3Fb8X003h2HRIFiRWNT8cg7hDfFo=');
     background-size: cover;
-    color: transparent; /* Ukrycie tekstu, jeśli obraz jest flagą */
+    color: transparent;
     width: 40px;
     height: 25px;
 }
